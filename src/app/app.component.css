@@ -1,0 +1,93 @@
+.alas {
+  margin-left: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.alas h1 {
+  margin: 0;
+  padding: 0;
+}
+.kartu {
+  flex-basis: 100%;
+  background-color: white;
+  margin: auto 2rem auto 2rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+.deskripsi {
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 10;
+  margin: auto 0 auto 0;
+  width: 20vw;
+}
+.bagan {
+  flex-grow: 6;
+  width: 0vw;
+  height: 100%;
+  margin: auto;
+}
+
+.penjelasan{
+  margin:1rem;
+}
+.topik {
+  font-size: 1.2em;
+  word-wrap: break-word;
+}
+
+.total {
+  font-size: 2.5em;
+  word-wrap: break-word; 
+  font-weight: 600;
+  margin: -0.8rem 0 -0.5rem 0;
+}
+
+.ket {
+  font-size: 1em;
+  word-wrap: break-word;
+}
+
+.positif {
+  color:forestgreen;
+}
+
+.negatif {
+  color:firebrick;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  .alas {
+    margin-left: 0;
+  }
+  .alas h1 {
+    text-align: center;
+    margin: 1rem auto 1rem auto;
+  }
+  .deskripsi{
+    text-align: center;
+    width: 100%;
+  }
+  .kartu {
+    flex-direction: column;
+  }
+  .bagan {
+    width:80vw;
+    height:auto;
+  }
+  .topik {
+    font-size: 1.2em;
+  }
+  .total {
+    font-size: 3em;
+  }
+  .ket {
+    font-size: 1em;
+  }
+}

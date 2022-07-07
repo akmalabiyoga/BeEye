@@ -4,17 +4,19 @@
   top: 0px;
   left: 0px;
   height: 100%;
-  width: 15em;
+  width: 15rem;
   box-shadow: -20px 0 30px;
 }
 
 .sbar .logo {
   position: absolute;
-  top: 1em;
-  left: 0em;
+  top: 0rem;
+  left: 0rem;
+  height: 4rem;
+  line-height: 6rem;
   text-align: center;
   width: 100%;
-  font-size:2rem;
+  font-size:2em;
 }
 
 .sbar ul{
@@ -22,7 +24,7 @@
   position: absolute;
   top: 4em;
   width:100%;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   padding: 0;
 }
 
@@ -37,13 +39,13 @@
 }
 
 .sbar li {
-  height: 2.3em;
-  line-height: 2.3em;
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
 }
 
 .sbar .pi {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .sbar li:hover,
@@ -52,12 +54,12 @@
   color: white;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-aspect-ratio: 4/3) {
   .sbar {
     position: relative;
     top: 0;
     width: 100%;
-    padding-top: 0.5em;
+    padding-top: 0.5rem;
     height: auto;
     display: block;
     text-align: center;

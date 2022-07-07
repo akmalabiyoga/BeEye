@@ -1,2 +1,30 @@
 <app-sidebar></app-sidebar>
 <app-topbar></app-topbar>
+<div class="alas">
+  <div style="display: flex; flex-direction: row; width: 100%; margin: 1rem 2rem 1rem 2rem; flex-wrap: wrap; justify-content: space-between;">
+    <h1>Saldo Kas (Proyeksi vs Realisasi)</h1>
+    <p-calendar class="p-inputtext-sm" placeholder="range" inputId="basic" [(ngModel)]="date1"></p-calendar>
+  </div>
+  <div class="kartu">
+    <div class="deskripsi">
+      <div class="penjelasan">
+        <div class="topik">Total Saldo Kas</div>
+        <div class="total">345.901k</div>
+        <div class="ket positif"><i class="pi pi-caret-up" style="fill: red;"></i>keterangan</div>
+      </div>
+      <div class="penjelasan">
+        <div class="topik">Rata-rata deviasi Kas</div>
+        <div class="total">Sekian</div>
+        <div class="ket positif">keterangan</div>
+      </div>
+      <div class="penjelasan">
+        <div class="topik">Volatilitas Proyeksi deviasi Kas</div>
+        <div class="total">Sekian</div>
+        <div class="ket negatif">keterangan</div>
+      </div>
+    </div>
+    <div class="bagan">
+        <p-chart type="line"  [data]="basicData" [options]="basicOptions"></p-chart>
+    </div>
+  </div>
+</div>
