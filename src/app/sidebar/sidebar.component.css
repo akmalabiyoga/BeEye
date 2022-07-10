@@ -9,21 +9,16 @@
 }
 
 .sbar .logo {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  height: 4rem;
-  line-height: 6rem;
   text-align: center;
+  background-color: aqua;
   width: 100%;
   font-size:2em;
 }
 
 .sbar ul{
   list-style: none;
-  position: absolute;
-  top: 4em;
-  width:100%;
+  margin: auto;
+  width:80%;
   font-size: 1.2em;
   padding: 0;
 }
