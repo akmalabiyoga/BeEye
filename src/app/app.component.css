@@ -62,7 +62,7 @@
   color:firebrick;
 }
 
-@media (max-aspect-ratio: 4/3) {
+@media screen and (max-width:900px) {
   .alas {
     margin-left: 0;
   }
