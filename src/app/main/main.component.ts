@@ -1,19 +1,18 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
-export class AppComponent implements OnInit {
+export class MainComponent implements OnInit {
   basicData: any;
   basicOptions: any;
   date1!: Date;
   title = 'BeEye';
-  navbar!: Boolean;
   constructor(private primengConfig: PrimeNGConfig) { }
+
   ngOnInit(): void {
     this.primengConfig.ripple = true;
     this.basicData = {
@@ -64,9 +63,5 @@ export class AppComponent implements OnInit {
       }
     };
   }
-  navToggle(value: Boolean) {
-    console.log("parent dapet data: "+value)
-    this.navbar = value;
-    console.log('navbar di parent nilainya '+this.navbar)
-  }
+
 }

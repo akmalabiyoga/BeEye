@@ -1,15 +1,10 @@
-<app-sidebar [navbar]="navbar"></app-sidebar>
-<app-topbar (activeNav)="navToggle($event)"></app-topbar>
-<div class="main">
-  <app-main></app-main>
-</div>
 
-<!-- <div class="alas">
-  <div style="display: flex; flex-direction: row; width: 100%; margin: 1rem 2rem 1rem 2rem; flex-wrap: wrap; justify-content: space-between;">
-    <h1>Saldo Kas (Proyeksi vs Realisasi)</h1>
+<div class="m-2 flex flex-column">
+  <div class="flex flex-column align-items-center">
+    <h2 class="align-items-center my-2 text-center">Saldo Kas (Proyeksi vs Realisasi)</h2>
     <p-calendar class="p-inputtext-sm" placeholder="range" inputId="basic" [(ngModel)]="date1"></p-calendar>
   </div>
-  <div class="kartu">
+  <div class="flex flex-column-reverse bg-white p-3 border-round-xl">
     <div class="deskripsi">
       <div class="penjelasan">
         <div class="topik">Total Saldo Kas</div>
@@ -44,4 +39,4 @@
     <div> JUDUL </div>
     <div> KOTAK </div>
   </div>
-</div> -->
+</div>

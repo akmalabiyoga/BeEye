@@ -1,10 +1,14 @@
-<div class="tbar">
-  <div class="ava">
-  <img src="../../assets/img/ava-example.jpg" alt="ava">
-  <span class="pil"> </span>
-  <div class="ident">
-    <div class="nama">Akmal Yusuf Abiyoga</div>
-    <div class="job">Dit. SITP</div>
+<div class="toolbar">
+  <div class="account">
+    <div class="ava">
+      <img src="../../assets/img/ava-example.jpg">
+    </div>
+    <div>
+      <div class="name">Akmal Yusuf Abiyoga</div>
+      <div class="job">Dit. SITP</div>
+    </div>
   </div>
+  <div class="toggle">
+    <a href="#" (click)="navToggle()"><i *ngIf="!this.navbar" class="pi pi-bars"></i><i *ngIf="this.navbar" class="pi pi-times"></i></a>
   </div>
 </div>
