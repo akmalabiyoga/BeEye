@@ -1,6 +1,6 @@
 .navbar {
   position:fixed;
-  bottom: 4rem;
+  top: 4rem;
   left: 0;
   right: 0;
 
@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
 
-  background-color: white;
+  background-color: var(--surface-card);
   box-shadow: 1px 1px 10px -5px;
   transition: display 200ms;
   z-index: 98;
@@ -20,13 +20,13 @@
   text-align: center;
   padding: 1rem 0 1rem 0;
   font-size: 1.2rem;
-  border-bottom: 2px solid var(--gray-100);
+  border-bottom: 2px solid var(--surface-100);
 }
 nav {
   display: flex;
   flex-direction: column;
 
-  border-bottom: 2px solid var(--gray-200);
+  border-bottom: 2px solid var(--surface-200);
 }
 nav a, nav a:link, nav a:visited {
   display: flex;
@@ -34,7 +34,7 @@ nav a, nav a:link, nav a:visited {
   align-items: center;
   justify-content: center;
 
-  color: black;
+  color: var(--primary-text);
   text-decoration: none;
   font-size: 1.2em;
 

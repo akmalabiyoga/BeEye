@@ -1,6 +1,6 @@
 .toolbar {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -37,6 +37,9 @@
   padding: 0.8rem;
   border-radius: 0.5rem;
   transition: background-color 200ms;
+}
+.toggle a{
+  color: var(--primary-text);
 }
 .toggle .pi:hover {
   background-color: var(--gray-100);

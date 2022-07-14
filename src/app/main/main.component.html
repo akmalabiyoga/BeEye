@@ -1,42 +1,73 @@
 
-<div class="m-2 flex flex-column">
-  <div class="flex flex-column align-items-center">
-    <h2 class="align-items-center my-2 text-center">Saldo Kas (Proyeksi vs Realisasi)</h2>
-    <p-calendar class="p-inputtext-sm" placeholder="range" inputId="basic" [(ngModel)]="date1"></p-calendar>
+<div class="col">
+  <div class="flex flex-row justify-content-between align-items-center">
+    <h2 class="align-items-center my-3 ml-2">Saldo Kas (Proyeksi vs Realisasi)</h2>
+    <p-calendar class="col-3 p-inputtext-sm text-right p-0" placeholder="range" inputId="basic" [(ngModel)]="date1"></p-calendar>
   </div>
-  <div class="flex flex-column-reverse bg-white p-3 border-round-xl">
-    <div class="deskripsi">
-      <div class="penjelasan">
-        <div class="topik">Total Saldo Kas</div>
-        <div class="total">345.901k</div>
-        <div class="ket positif"><i class="pi pi-angle-double-up"></i> 15% dibanding bulan lalu</div>
+  <div class="flex flex-column-reverse surface-card lg:flex-row p-3 border-round-xl shadow-2">
+    <div class="flex flex-wrap lg:flex-column lg:col-3 lg:justify-content-center">
+      <div class="col-4 lg:col-12">
+        <div class="font-semibold">Total Saldo Kas</div>
+        <div class="font-bold text-2xl">345.901k</div>
+        <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 15% dibanding bulan lalu</div>
       </div>
-      <div class="penjelasan">
-        <div class="topik">Rata-rata deviasi Kas</div>
-        <div class="total">45.701k</div>
-        <div class="ket positif"><i class="pi pi-angle-double-up"></i> 5% dibanding bulan lalu</div>
+      <div class="col-4 lg:col-12">
+        <div class="font-semibold">Rata-rata deviasi Kas</div>
+        <div class="font-bold text-2xl">45.701k</div>
+        <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 5% dibanding bulan lalu</div>
       </div>
-      <div class="penjelasan">
-        <div class="topik">Volatilitas Proyeksi deviasi Kas</div>
-        <div class="total">5.801k</div>
-        <div class="ket negatif"><i class="pi pi-angle-double-down"></i> 20% dibanding bulan lalu</div>
+      <div class="col-4 lg:col-12">
+        <div class="font-semibold">Volatilitas Proyeksi Deviasi Kas</div>
+        <div class="font-bold text-2xl">5.801k</div>
+        <div class="text-red-700 text-sm"><i class="pi pi-angle-double-down"></i> 20% dibanding bulan lalu</div>
       </div>
     </div>
-    <div class="bagan">
+    <div class="lg:col-9">
         <p-chart type="line"  [data]="basicData" [options]="basicOptions"></p-chart>
     </div> 
   </div>
 </div>
-<div class="alas" style="margin-top: 2rem;">
-  <div style="display:flex; flex-direction: column; background-color: aqua; flex-grow:1;">
-    <div style="display:flex;">
-      <div>JUDUL</div>
-      <div>BUTTON</div>
+<div class="flex flex-row flex-wrap align-items-end">
+  <div class="flex flex-column col-12 md:col-6">
+    <div class="flex flex-row justify-content-between align-items-end">
+      <h2 class="align-items-center my-3 ml-2">Pendapatan & Hibah (Proyeksi vs Realisasi)</h2>
+      <button pButton type="button" icon="pi pi-table" class="p-button-rounded p-button-outlined p-button-sm my-3"></button>
     </div>
-    <div> KOTAK </div>
+    <div class="relative surface-card p-3 border-round-xl shadow-2">
+      <p-chart type="line"  [data]="basicData" [options]="basicOptions"></p-chart>
+      <div class="flex flex-wrap mt-2">
+        <div class="col-6 border-right-1">
+          <div class="font-semibold">Total Saldo Kas</div>
+          <div class="font-bold text-2xl">345.901k</div>
+          <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 15% dibanding bulan lalu</div>
+        </div>
+        <div class="col-6 border-left-1">
+          <div class="font-semibold">Rata-rata deviasi Kas</div>
+          <div class="font-bold text-2xl">45.701k</div>
+          <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 5% dibanding bulan lalu</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div style="display:flex; flex-direction: column; background-color:blueviolet; flex-grow: 1;">
-    <div> JUDUL </div>
-    <div> KOTAK </div>
+  <div class="flex flex-column col-12 md:col-6">
+    <div class="flex flex-row justify-content-between align-items-end">
+      <h2 class="align-items-center my-3 ml-2">Saldo Kas (Proyeksi vs Realisasi)</h2>
+      <button pButton type="button" icon="pi pi-chart-bar" class="p-button-rounded p-button-outlined p-button-sm my-3"></button>
+    </div>
+    <div class="flex flex-column surface-card p-3 border-round-xl shadow-2">
+      <p-chart type="line"  [data]="basicData" [options]="basicOptions"></p-chart>
+      <div class="flex flex-wrap mt-2">
+        <div class="col-6 border-right-1">
+          <div class="font-semibold">Total Saldo Kas</div>
+          <div class="font-bold text-2xl">345.901k</div>
+          <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 15% dibanding bulan lalu</div>
+        </div>
+        <div class="col-6 border-left-1">
+          <div class="font-semibold">Rata-rata deviasi Kas</div>
+          <div class="font-bold text-2xl">45.701k</div>
+          <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 5% dibanding bulan lalu</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

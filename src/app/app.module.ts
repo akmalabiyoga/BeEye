@@ -13,13 +13,15 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { MainComponent } from './main/main.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     TopbarComponent,
-    MainComponent
+    MainComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
