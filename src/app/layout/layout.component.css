@@ -10,7 +10,6 @@
   justify-content: center;
 
   background-color: var(--surface-card);
-  box-shadow: 1px 1px 10px -5px;
   transition: display 200ms;
   z-index: 98;
 }
@@ -97,7 +96,7 @@ nav .active {
   color: var(--primary-text);
 }
 .toggle .pi:hover {
-  background-color: var(--gray-100);
+  background-color: var(--surface-hover);
 }
 
 @media screen and (min-width: 992px) {
@@ -136,10 +135,18 @@ nav .active {
     padding-top: 0.4rem;
     column-gap: 0.5rem;
     transition: background-color 0.2s;
-
-    
   }
   .navbar .account {
     display: none;
   }
+  /* .navbar .toggle {
+    position: fixed;
+    top: 0;
+    left: 20.4rem;
+    display: block;
+    border-radius: 0;
+  }
+  .navbar .toggle .pi {
+    border-radius: 0;
+  } */
 }

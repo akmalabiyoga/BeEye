@@ -1,4 +1,4 @@
-<div class="navbar" [ngClass]="{'show': navbar}">
+<div class="navbar shadow-2" [ngClass]="{'show': navbar}">
   <!-- [ngClass]="{'active': navbar}" -->
   <div class="flex align-content-end hover:bg-blue-100">
     <div class="account">
@@ -17,6 +17,9 @@
     <a routerLink="users" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="pi pi-th-large" routerLink="users"></i> Dashboard 2</a>
     <a routerLink="users/add" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="pi pi-plus" routerLink="users/add"></i> Add</a>
   </nav>
+  <!-- <div class="toggle">
+    <a href="#" (click)="navToggle()"><i *ngIf="!this.navbar" class="pi pi-bars"></i><i *ngIf="this.navbar" class="pi pi-times"></i></a>
+  </div> -->
 </div>
 <div class="toolbar">
   <div class="toggle">
