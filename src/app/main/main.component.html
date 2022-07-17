@@ -4,25 +4,25 @@
       <h2 class="align-items-center my-3 ml-2 lg:text-5xl">Saldo Kas (Proyeksi vs Realisasi)</h2>
       <p-calendar class="col-3 p-inputtext-sm text-right p-0" selectionMode="range" [touchUI]="true" placeholder="range" inputId="basic" [(ngModel)]="date1"></p-calendar>
     </div>
-    <div class="flex flex-column-reverse surface-card lg:flex-row p-3 border-round-xl shadow-2">
-      <div class="flex flex-wrap lg:flex-column lg:col-3 lg:justify-content-center">
-        <div class="col-4 lg:col-12">
+    <div class="flex flex-column-reverse lg:align-items-center surface-card lg:flex-row p-3 border-round-xl shadow-2">
+      <div class="flex flex-wrap lg:flex-column lg:col-3 lg:justify-content-around">
+        <div class="col-4 lg:col-12 hover:surface-hover border-round-xl">
           <div class="font-semibold lg:text-xl">Total Saldo Kas</div>
           <div class="font-bold text-2xl lg:text-4xl">345.901k</div>
           <div class="text-green-700 text-sm lg:text-base"><i class="pi pi-angle-double-up"></i> 15% dibanding bulan lalu</div>
         </div>
-        <div class="col-4 lg:col-12">
+        <div class="col-4 lg:col-12 hover:surface-hover border-round-xl">
           <div class="font-semibold lg:text-xl">Rata-rata deviasi Kas</div>
           <div class="font-bold text-2xl lg:text-4xl">45.701k</div>
           <div class="text-green-700 text-sm lg:text-base"><i class="pi pi-angle-double-up"></i> 5% dibanding bulan lalu</div>
         </div>
-        <div class="col-4 lg:col-12">
+        <div class="col-4 lg:col-12 hover:surface-hover border-round-xl">
           <div class="font-semibold lg:text-xl">Volatilitas Proyeksi Deviasi Kas</div>
           <div class="font-bold text-2xl lg:text-4xl">5.801k</div>
           <div class="text-red-700 text-sm lg:text-base"><i class="pi pi-angle-double-down"></i> 20% dibanding bulan lalu</div>
         </div>
       </div>
-      <div class="lg:col-9">
+      <div class="lg:col-9  hover:surface-hover border-round-xl">
           <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
       </div> 
     </div>
@@ -36,12 +36,12 @@
       <div class="relative surface-card p-3 border-round-xl shadow-2">
         <p-chart type="line"  [data]="basicData" [options]="basicOptions"></p-chart>
         <div class="flex flex-wrap mt-2">
-          <div class="col-6 border-right-1">
+          <div class="col-6 border-right-1 hover:surface-hover">
             <div class="font-semibold">Total Saldo Kas</div>
             <div class="font-bold text-2xl">345.901k</div>
             <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 15% dibanding bulan lalu</div>
           </div>
-          <div class="col-6 border-left-1">
+          <div class="col-6 border-left-1 hover:surface-hover">
             <div class="font-semibold">Rata-rata deviasi Kas</div>
             <div class="font-bold text-2xl">45.701k</div>
             <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 5% dibanding bulan lalu</div>
@@ -57,12 +57,12 @@
       <div class="flex flex-column surface-card p-3 border-round-xl shadow-2">
         <p-chart type="line"  [data]="basicData" [options]="basicOptions"></p-chart>
         <div class="flex flex-wrap mt-2">
-          <div class="col-6 border-right-1">
+          <div class="col-6 border-right-1 hover:surface-hover">
             <div class="font-semibold">Total Saldo Kas</div>
             <div class="font-bold text-2xl">345.901k</div>
             <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 15% dibanding bulan lalu</div>
           </div>
-          <div class="col-6 border-left-1">
+          <div class="col-6 border-left-1 hover:surface-hover">
             <div class="font-semibold">Rata-rata deviasi Kas</div>
             <div class="font-bold text-2xl">45.701k</div>
             <div class="text-green-700 text-sm"><i class="pi pi-angle-double-up"></i> 5% dibanding bulan lalu</div>
