@@ -13,6 +13,9 @@ import { MainComponent } from './main.component';
 import { LayoutsModule } from '../layouts/layouts.module';
 import { HttpClientModule } from '@angular/common/http';
 import {TableModule} from 'primeng/table';
+import {TooltipModule} from 'primeng/tooltip';
+import { Dashboard2Component } from './dashboard2/dashboard2.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -20,6 +23,7 @@ import {TableModule} from 'primeng/table';
   declarations: [
     MainComponent,
     DashboardComponent,
+    Dashboard2Component,
   ],
   imports: [
     CommonModule,
@@ -28,12 +32,14 @@ import {TableModule} from 'primeng/table';
     FormsModule,
     LayoutsModule,
     HttpClientModule,
+    AppRoutingModule,
 
     ChartModule,
     ToastModule,
     TabViewModule,
     CalendarModule,
-    TableModule
+    TableModule,
+    TooltipModule
   ]
 })
 export class MainModule { }
