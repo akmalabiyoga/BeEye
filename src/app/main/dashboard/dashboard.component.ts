@@ -25,53 +25,79 @@ export class DashboardComponent implements OnInit, OnDestroy {
   public proyeksiArray: Array<number> = [];
   public realisasiArray: Array<number> = [];
   
-  constructor(private primengConfig: PrimeNGConfig, private http: HttpClient) { }
+  constructor(private primengConfig: PrimeNGConfig, private http: HttpClient, public dataServis: DataService) { }
   ngOnDestroy(): void {
     this.sub1.unsubscribe()
   }
 
   ngOnInit(): void {
-    this.sub1 = this.http.get('../../../assets/datadummy.csv', {responseType: 'text'}).subscribe({
-      next: (data) => {
-        let csvtoRow = data.split("\n");
-        for (let i = 1; i < csvtoRow.length - 1; i++){
-          let row = csvtoRow[i].split(",");
-          this.dataArray.push(new Realisasi(
-            row[0],
-            parseInt(row[1]),
-            parseInt(row[2])
-          ))
-        }
-      },
-      error: (e) => console.log(e),
-      complete: () => {
-        this.dataArray.forEach(x => {
-          this.labelArray.push(x.bulan)
-          this.proyeksiArray.push(x.proyeksi)
-          this.realisasiArray.push(x.realisasi)
-        })
-        this.basicData = {
-          labels: this.labelArray,
-          datasets: [
-            {
-              label: 'Realisasi',
-              data: this.realisasiArray,
-              fill: false,
-              borderColor: '#42A5F5',
-              tension: .1
-            },
-            {
-              label: 'Proyeksi',
-              data: this.proyeksiArray,
-              fill: true,
-              borderColor: '#d0ddf5',
-              tension: .1,
-              backgroundColor: '#d0ddf5'
-            }
-          ]
-        }
-      }
+    this.dataArray = this.dataServis.dataDumdum
+    this.dataArray.forEach(x => {
+      this.labelArray.push(x.bulan)
+      this.proyeksiArray.push(x.proyeksi)
+      this.realisasiArray.push(x.realisasi)
     })
+    this.basicData = {
+      labels: this.labelArray,
+      datasets: [
+        {
+          label: 'Realisasi',
+          data: this.realisasiArray,
+          fill: false,
+          borderColor: '#42A5F5',
+          tension: .1
+        },
+        {
+          label: 'Proyeksi',
+          data: this.proyeksiArray,
+          fill: true,
+          borderColor: '#d0ddf5',
+          tension: .1,
+          backgroundColor: '#d0ddf5'
+        }
+      ]
+    }
+    // this.sub1 = this.http.get('../../../assets/datadummy.csv', {responseType: 'text'}).subscribe({
+    //   next: (data) => {
+    //     let csvtoRow = data.split("\n");
+    //     for (let i = 1; i < csvtoRow.length - 1; i++){
+    //       let row = csvtoRow[i].split(",");
+    //       this.dataArray.push(new Realisasi(
+    //         row[0],
+    //         parseInt(row[1]),
+    //         parseInt(row[2])
+    //       ))
+    //     }
+    //   },
+    //   error: (e) => console.log(e),
+    //   complete: () => {
+    //     this.dataArray.forEach(x => {
+    //       this.labelArray.push(x.bulan)
+    //       this.proyeksiArray.push(x.proyeksi)
+    //       this.realisasiArray.push(x.realisasi)
+    //     })
+    //     this.basicData = {
+    //       labels: this.labelArray,
+    //       datasets: [
+    //         {
+    //           label: 'Realisasi',
+    //           data: this.realisasiArray,
+    //           fill: false,
+    //           borderColor: '#42A5F5',
+    //           tension: .1
+    //         },
+    //         {
+    //           label: 'Proyeksi',
+    //           data: this.proyeksiArray,
+    //           fill: true,
+    //           borderColor: '#d0ddf5',
+    //           tension: .1,
+    //           backgroundColor: '#d0ddf5'
+    //         }
+    //       ]
+    //     }
+    //   }
+    // })
     this.primengConfig.ripple = true;
     
     this.basicOptions = {
