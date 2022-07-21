@@ -13,6 +13,20 @@ export class DataService {
   getData():Observable<Realisasi[]> {
     return this.http.get<Realisasi[]>(this.url)
   }
+  public dataDumdum = [
+    {bulan: "Jan", proyeksi: 23, realisasi: 24},
+    {bulan: "Feb", proyeksi: 22, realisasi: 21},
+    {bulan: "Mar", proyeksi: 24, realisasi: 23},
+    {bulan: "Apr", proyeksi: 23, realisasi: 22},
+    {bulan: "Mei", proyeksi: 21, realisasi: 20},
+    {bulan: "Jun", proyeksi: 27, realisasi: 23},
+    {bulan: "Jul", proyeksi: 28, realisasi: 26},
+    {bulan: "Aug", proyeksi: 29, realisasi: 28},
+    {bulan: "Sep", proyeksi: 30, realisasi: 32},
+    {bulan: "Okt", proyeksi: 21, realisasi: 24},
+    {bulan: "Nov", proyeksi: 19, realisasi: 24},
+    {bulan: "Des", proyeksi: 30, realisasi: 32},
+  ]
 }
 
 export class Realisasi{
