@@ -11,6 +11,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainComponent } from './main.component';
 import { LayoutsModule } from '../layouts/layouts.module';
+import { HttpClientModule } from '@angular/common/http';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -25,11 +27,13 @@ import { LayoutsModule } from '../layouts/layouts.module';
     BrowserAnimationsModule,
     FormsModule,
     LayoutsModule,
+    HttpClientModule,
 
     ChartModule,
     ToastModule,
     TabViewModule,
-    CalendarModule
+    CalendarModule,
+    TableModule
   ]
 })
 export class MainModule { }
