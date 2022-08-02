@@ -13,8 +13,13 @@
   </div>
   <a class="logo"><i class="pi pi-prime" style="font-size: 2rem;"></i> BeeEye</a>
   <nav>
-    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="pi pi-th-large"></i> Dashboard 1</a>
-    <a routerLink="dashboard2" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="pi pi-th-large" routerLink="users"></i> Dashboard 2</a>
+    <a routerLink="" routerLinkActive="active" (click)="navToggle()" [routerLinkActiveOptions]="{exact:true}"><i class="pi pi-th-large"></i> Dashboard 1</a>
+    <a routerLink="dashboard2" routerLinkActive="active" (click)="navToggle()" [routerLinkActiveOptions]="{exact:true}"><i class="pi pi-th-large"></i> Dashboard 2</a>
+    <a class="drop toggled" href="javascript:void(0)"  (click)="sidedropToggle()">Dropdown <i class="pi pi-caret-down"></i></a>
+    <ul>
+      <li>chiild1</li>
+      <li> child2</li>
+    </ul>
   </nav>
   <!-- <div class="toggle">
     <a href="#" (click)="navToggle()"><i *ngIf="!this.navbar" class="pi pi-bars"></i><i *ngIf="this.navbar" class="pi pi-times"></i></a>
@@ -22,7 +27,7 @@
 </div>
 <div class="toolbar">
   <div class="toggle">
-    <a href="#" (click)="navToggle()"><i *ngIf="!this.navbar" class="pi pi-bars"></i><i *ngIf="this.navbar" class="pi pi-times"></i></a>
+    <a href="javascript:void(0)" (click)="navToggle()"><i *ngIf="!this.navbar" class="pi pi-bars"></i><i *ngIf="this.navbar" class="pi pi-times"></i></a>
   </div>
   <div class="account border-round-xl">
     <div class="ava">
